@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useMemo, useCallback } from "react";
-import { useSearchParams } from "next/navigation";
 import { SlidersHorizontal, X, ChevronDown } from "lucide-react";
 import { products } from "@/lib/mockData";
 import { ProductCard } from "@/components/product/ProductCard";
@@ -18,7 +17,6 @@ const PRICE_RANGES = [
 ];
 
 export default function ShopPage() {
-    const searchParams = useSearchParams();
 
     const [isLoading, setIsLoading] = useState(true);
     const [selectedPriceRange, setSelectedPriceRange] = useState(0);
